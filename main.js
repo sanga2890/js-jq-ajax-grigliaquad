@@ -3,6 +3,19 @@
 // Se il numero restituito dall'api è <= 5, il quadrato su cui l'utente ha cliccato diventa giallo; se invece il numero restituito dall'api è > 5, il quadrato su cui l'utente ha cliccato diventa verde.
 // In entrambi i casi, andiamo ad inserire nel quadrato il numero restituito dall'api.
 
+// BONUS:
+// aggiungo le caselle con handlebars
+for (var i = 0; i < 36; i++) {
+    var source = $("#my-template").html();
+            var template = Handlebars.compile(source);
+            var context = {
+                'class': 'square'
+            }
+            var html = template(context);
+            $('.grill').append(html);
+}
+
+
 // intercetto il click su ogni quadrato;
 $('.square').click(function(){
     // dichiaro la variabile this esterna ad Ajax perchè altrimenti non verrebbe considerata;
