@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.grill {
+    display: flex;
+    flex-wrap: wrap;
+    width: 602px;
+    height: 602px;
+    margin: 0 auto;
+    margin-top: 150px;
+    border: 1px solid black;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    font-size: 70px;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+
+}
+
+.green {
+    color: green;
+}
