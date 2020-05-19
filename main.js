@@ -15,8 +15,14 @@ $('.square').click(function(){
             // recupero il numero generato dall'api;
             var numero = data.response;
             console.log('Numero generato: ' + numero);
+
             // stampo in pagina il numero generato nella sua rispettiva casella;
             $(single_square).text(numero)
+
+            // azzero tutte le condizioni in modo da poter ricliccare più volte sulla stessa casella e ottenere sempre il risultato desiderato;
+            $(single_square).removeClass('yellow')
+            $(single_square).removeClass('green')
+
             // creo la condizione per cambiare il colore della casella;
             if (numero <= 5) {
                 $(single_square).addClass('yellow')
